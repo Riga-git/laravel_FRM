@@ -18,6 +18,11 @@ class TaskController extends Controller
 
     public function index()
     {
-        return view('task.index')   ->with('tasks', $this->tasks);
+        return view('task.index')->with('tasks', $this->tasks);
+    }
+
+    public function show( $task)
+    {
+        return view('task.show')->with('task', $this->tasks[$task]);
     }
 }
